@@ -61,7 +61,13 @@ h3 {
 .item-details h3 ~ p {
   margin: 0;
 }
-
+.divier {
+    border-bottom: 1px dashed #343434;
+    padding:  25px 0;
+}
+.divier > section:last-of-type {
+  border-bottom: none;
+}
 
 /* Profile
 ------------------------------------*/
@@ -93,7 +99,7 @@ header {
 }
 .project-item {
   overflow: hidden;
-  border-bottom: 1px dashed #343434;
+
   padding: 25px 0;
 }
 .project-item img {
