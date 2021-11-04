@@ -14,6 +14,16 @@ const removeTodo = function(id){
         todos.splice(todoIndex,1)
     }
 }
+const isCompleted = function(id){
+    const todo = todos.find(function(todo){
+         getID=id
+        return todo.id === id
+    })
+    if(todo!==undefined){
+       todo.completed=!todo.completed
+            
+    }
+}
 const  renderTodos = function ( todos , filter ){
     let filtertodo = todos.filter(function(todo){
         const searchTextMatch = todo.title.toLowerCase().includes(filter.searchText.toLowerCase())
@@ -47,10 +57,18 @@ const generateTodo = function(todo){
         renderTodos(todos,filters)
     })
     const checkboxEl= document.createElement('input')
+ 
     checkboxEl.setAttribute('type','checkbox')
+    checkboxEl.checked = todo.completed
+    checkboxEl.addEventListener('change' , function(e){
+        isCompleted(todo.id)
+        saveTodos(todos)
+        renderTodos(todos,filters)
+    })
+    
     const DivEl=document.createElement('div')
     DivEl.appendChild(checkboxEl)
-    
+
     const todoEl=document.createElement('span')
     todoEl.textContent=todo.title
     DivEl.appendChild(todoEl)
