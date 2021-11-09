@@ -9,7 +9,7 @@ const todos =
 //1. Convert array to array of Objects -> text , completed
 //2. Create function to remove a todo by text value
 
-const deleteTodo = function(todos,key)
+const deleteTodo = (todos,key) =>
 {
       const index =todos.findIndex(function (todo){
           return todo.title.toLowerCase()===key.toLowerCase()
@@ -20,18 +20,15 @@ const deleteTodo = function(todos,key)
 }
 //deleteTodo(todos ,' 231react.js')
 //console.log(todos)
-const getThingsToDo = function (todos){
-    return todos.filter( function (todo) {
-         
-        return !todo.completed
-        
-    })}
+const getThingsToDo =  (todos) =>(
+     todos.filter(  (todo) => (!todo.completed ) ) 
+)
 const sortTodos = function (todos) {
     todos.sort(function(a , b)   {
-        if(a.completed === false && b.completed ===true){
+        if(!a.completed && b.completed ){
             return -1
         }
-        else if (b.completed===false && a.completed===true){
+        else if (!b.completed && a.completed){
             return 1
         }
         else return 0

@@ -1,10 +1,11 @@
+
 const LoadTodos= function(){
     const todosJSON=localStorage.getItem('todos')
-    if(todosJSON!==null)
-    {return JSON.parse(todosJSON)}
-    else{
-   return []
-    }    
+     try{return todosJSON!==null ? JSON.parse(todosJSON) : []
+    }catch(e){
+        return []
+    }
+        
 }
 const removeTodo = function(id){
     const todoIndex = todos.findIndex(function(todo){
@@ -24,34 +25,30 @@ const isCompleted = function(id){
             
     }
 }
-const  renderTodos = function ( todos , filter ){
+const  renderTodos =  ( todos , filter )=>{
     let filtertodo = todos.filter(function(todo){
         const searchTextMatch = todo.title.toLowerCase().includes(filter.searchText.toLowerCase())
         const hideCompletedMatch = !todo.completed || !filters.hideCompleted
         return searchTextMatch && hideCompletedMatch
       
     })
-    const todosLeft=filtertodo.filter(function(todo){
-        return !todo.completed
-    })
+    const todosLeft=filtertodo.filter((todo) => !todo.completed)
+    
 
     document.querySelector('#todo-filter').innerHTML=''
 
  
     document.querySelector('#todo-filter').innerHTML=''
     document.querySelector('#todo-filter').appendChild(generateMsg(todosLeft))
-    filtertodo.forEach( function(todo){
-    document.querySelector('#todo-filter').appendChild(generateTodo(todo))
-    })
+    filtertodo.forEach( (todo)=>document.querySelector('#todo-filter').appendChild(generateTodo(todo)))
     }
 
-const saveTodos=function(todos){
-    localStorage.setItem('todos',JSON.stringify(todos))
-} 
-const generateTodo = function(todo){
+const saveTodos=(todos) => localStorage.setItem('todos',JSON.stringify(todos))
+
+const generateTodo = (todo)=>{
     const buttonEl = document.createElement('button')
     buttonEl.textContent = 'x'
-    buttonEl.addEventListener('click',function(){
+    buttonEl.addEventListener('click',()=>{
         removeTodo(todo.id)
         saveTodos(todos)
         renderTodos(todos,filters)
@@ -60,7 +57,7 @@ const generateTodo = function(todo){
  
     checkboxEl.setAttribute('type','checkbox')
     checkboxEl.checked = todo.completed
-    checkboxEl.addEventListener('change' , function(e){
+    checkboxEl.addEventListener('change' , (e)=>{
         isCompleted(todo.id)
         saveTodos(todos)
         renderTodos(todos,filters)
@@ -75,7 +72,7 @@ const generateTodo = function(todo){
     DivEl.appendChild(buttonEl)
     return DivEl
 }       
-const generateMsg = function(todosL){
+const generateMsg = (todosL)=>{
     const msg = document.createElement('h2')
     msg.textContent = `you have ${todosL.length} todos left`
    return msg
