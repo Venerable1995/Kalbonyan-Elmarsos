@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should view totalling of 1 item 1`] = `
+<div>
+  <h1>
+    Viewing 
+    3
+     Expense Totalling : 
+    1141.95
+  </h1>
+</div>
+`;
