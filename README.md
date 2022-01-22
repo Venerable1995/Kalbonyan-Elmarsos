@@ -48,7 +48,7 @@
 ![70%](https://progress-bar.dev/30/?title=progress)
 <br />
 - [x] ![#0D64C3](https://via.placeholder.com/12/0D64C3/000000?text=+) `Done` `29h 30m` - 13 - [The Modern JavaScript Bootcamp](Udemy/The%20Modern%20JavaScript%20Bootcamp/) 
-- [x] ![#0D64C3](https://via.placeholder.com/12/EC5E5D/000000?text=+) `Done` `39h` - 14 - [The Complete React Developer Course](Udemy/The%20Complete%20React%20Developer%20Course)
+- [x] ![#0D64C3](https://via.placeholder.com/12/0D64C3/000000?text=+) `Done` `39h` - 14 - [The Complete React Developer Course](Udemy/The%20Complete%20React%20Developer%20Course)
 - [ ] ![#EC5E5D](https://via.placeholder.com/12/EC5E5D/000000?text=+) `in progress` `35h` - 15 - [The Complete Node.js Developer Course (3rd Edition)](Udemy/The%20Complete%20Node.js%20Developer%20Course/)
 
 <img src="https://img.shields.io/badge/Total%20Number%20Of%20Hours%20For%20This%20Courses-157h30m-blue">
