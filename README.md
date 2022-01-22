@@ -45,7 +45,7 @@
 
 <span id="MERN"></span>
 # MERN Stack
-![30%](https://progress-bar.dev/30/?title=progress)
+![70%](https://progress-bar.dev/30/?title=progress)
 <br />
 - [x] ![#0D64C3](https://via.placeholder.com/12/0D64C3/000000?text=+) `Done` `29h 30m` - 13 - [The Modern JavaScript Bootcamp](Udemy/The%20Modern%20JavaScript%20Bootcamp/) 
 - [x] ![#0D64C3](https://via.placeholder.com/12/EC5E5D/000000?text=+) `Done` `39h` - 14 - [The Complete React Developer Course](Udemy/The%20Complete%20React%20Developer%20Course)
