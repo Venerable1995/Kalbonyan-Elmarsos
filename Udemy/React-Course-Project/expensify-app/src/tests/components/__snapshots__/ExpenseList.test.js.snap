@@ -3,7 +3,7 @@
 exports[`should render ExpenseList with empty message 1`] = `
 <div>
   <p>
-    No Expenses
+    No expenses
   </p>
 </div>
 `;
@@ -12,10 +12,9 @@ exports[`should render ExpenseList with expenses 1`] = `
 <div>
   <ExpenseListItem
     amount={195}
-    createdAt={"1970-01-01T00:00:00.000Z"}
+    createdAt={0}
     description="Gum"
     id="1"
-    key="1"
     note=""
   />
   <ExpenseListItem
@@ -23,15 +22,13 @@ exports[`should render ExpenseList with expenses 1`] = `
     createdAt={-345600000}
     description="Rent"
     id="2"
-    key="2"
     note=""
   />
   <ExpenseListItem
     amount={4500}
-    createdAt={518400000}
+    createdAt={345600000}
     description="Credit Card"
     id="3"
-    key="3"
     note=""
   />
 </div>

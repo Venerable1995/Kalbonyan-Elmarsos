@@ -1,9 +1,8 @@
-import React from "react";
-import { shallow } from "enzyme";
-import NotFoundPage from "../../components/notFoundPage";
+import React from 'react';
+import { shallow } from 'enzyme';
+import NotFoundPage from '../../components/NotFoundPage';
 
-test(' should render notFoundPage',()=>{
-    const wrapper = shallow(<NotFoundPage />)
-    expect(wrapper).toMatchSnapshot();
-
-})
+test('should render NotFoundPage correctly', () => {
+  const wrapper = shallow(<NotFoundPage />);
+  expect(wrapper).toMatchSnapshot();
+});

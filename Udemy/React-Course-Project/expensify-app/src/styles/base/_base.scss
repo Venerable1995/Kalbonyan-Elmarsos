@@ -1,19 +1,20 @@
-html{
-    font-size:62.5%;
+html {
+  font-size: 62.5%;
 }
 
 body {
-    font-family:Helvetica,Arial, sans-serif;
-    font-size :$m-size;
-    
-}
-button{
-    cursor: pointer;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: $m-size;
 }
 
-button:disabled{
-    cursor: default;
+button {
+  cursor: pointer;
 }
-.is-active{
-    font-weight: bold;
+
+button:disabled {
+  cursor: default;
+}
+
+.is-active {
+  font-weight: bold;
 }
